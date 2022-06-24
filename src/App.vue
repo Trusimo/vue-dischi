@@ -26,14 +26,15 @@ export default {
   },
   data () {
     return {
-      apiUrl: "https://flynn.boolean.careers/exercises/api/array/music"
+      apiUrl: "https://flynn.boolean.careers/exercises/api/array/music",
+      mySongsList: ""
     }
   },
 
   methods: { 
     fetchApp() {
       axios.get(this.apiUrl).then((resp) => {
-        resp
+        this.mySongsList = resp.data.response;
       })
     }
   },
@@ -63,5 +64,7 @@ header {
 
 .card {
   background-color: #2e3a46;
+  width: 100px;
+  height: 300px;
 }
 </style>
