@@ -8,7 +8,7 @@
     <div class="card-container">
       <div class="card">
         <img src="" alt="">
-        <h1>Titolo canzone</h1>
+        <h1></h1>
         <p>Artista</p>
         <p>Anno</p>
       </div>
@@ -27,7 +27,7 @@ export default {
   data () {
     return {
       apiUrl: "https://flynn.boolean.careers/exercises/api/array/music",
-      mySongsList: ""
+      mySongsList: []
     }
   },
 
