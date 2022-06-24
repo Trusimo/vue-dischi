@@ -24,8 +24,10 @@ export default {
   components: {
     
   },
-  data:  {
-    apiUrl: "https://flynn.boolean.careers/exercises/api/array/music"
+  data () {
+    return {
+      apiUrl: "https://flynn.boolean.careers/exercises/api/array/music"
+    }
   },
 
   methods: { 
@@ -36,7 +38,7 @@ export default {
     }
   },
   mounted() {
-    this.apiUrl()
+    this.apiUrl
   }
 }
 </script>
