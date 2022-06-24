@@ -5,14 +5,20 @@
       
     </header>
 
-    <div class="card-container">
-      <div class="card" v-for="(item, index) in mySongsList" :key="index">
-        <img src="" alt="">
-        <p class="titolo"> {{item.title}} </p>
-        <p class="font-small"> {{item.author}} </p>
-        <p class="font-small"> {{item.year}} </p>
-      </div>
+    
+      <div class="card-bg">
+          <div class="container">
+            <div class="row row-cols-5">
+              <div class="col album-style" v-for="(item, index) in mySongsList" :key="index">
+                <img class="img-fluid album-img" :src="item.poster" alt="">
+                <span class="titolo text-center"> {{item.title}} </span>
+                <span class="font-small text-center"> {{item.author}} </span>
+                <span class="font-small text-center"> {{item.year}} </span>
+              </div>
+            </div>
+          </div>
     </div>
+
   </div>
 </template>
 
@@ -49,29 +55,34 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
 }
 
 header {
   background-color: #2e3a46;
   height: 80px;
 }
-.card-container {
-  padding: 100px 0;
+.card-bg {
   background-color: #1e2d3b;
-  display: flex;
-  justify-content: space-around;
+  padding: 50px;
 }
 
-.card {
+.album-style {
+  color:white;
+  padding: 10px 60px;
   background-color: #2e3a46;
-  padding: 10px;
-  color: white;
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album-img {
+  height: 150px;
+  width: 120px;
 }
 
 .titolo {
   font-size: 14px;
+  padding: 10px 0;
 }
 
 .font-small {
