@@ -37,7 +37,7 @@ export default {
     },
         
         getGenreList() {
-            const genreList: [];
+            let genreList = [];
             
             this.mySongsList.forEach((album) => {
                 if (!genreList.includes(album.genre)) {
