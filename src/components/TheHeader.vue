@@ -40,8 +40,6 @@ export default {
             const genreList: [];
             
             this.mySongsList.forEach((album) => {
-                // il genere che sto analizzando in questo ciclo, esiste già nella lista finale?
-                // Se non esiste, ne faccio push.
                 if (!genreList.includes(album.genre)) {
                 genreList.push(album.genre);
                 }
