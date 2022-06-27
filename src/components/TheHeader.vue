@@ -28,22 +28,26 @@ export default {
 
     methods: { 
         fetchApp() {
+            console.log(this.fetchApp);
             axios.get(this.apiUrl).then((resp) => {
                 this.mySongsList = resp.data.response;
-            }), console.log(this.fetchApp);
+            })
         },
+        
+
         mounted() {
+            console.log(this.mounted);
         this.fetchApp();
-        console.log(this.mounted);
     },
         
         getGenreList() {
+            console.log(this.getGenreList);
             let genreList = [];
             
             this.mySongsList.forEach((album) => {
                 if (!genreList.includes(album.genre)) {
                 genreList.push(album.genre);
-                } console.log(this.getGenreList);
+                }
             });
             return genreList;
             },
