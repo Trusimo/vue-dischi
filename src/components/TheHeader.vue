@@ -23,24 +23,33 @@ export default {
         return {
         apiUrl: "https://flynn.boolean.careers/exercises/api/array/music",
         mySongsList: [],
-        genreList: []
         }
     },
 
     methods: { 
         fetchApp() {
-        axios.get(this.apiUrl).then((resp) => {
-            this.mySongsList = resp.data.response;
-        })
+            axios.get(this.apiUrl).then((resp) => {
+                this.mySongsList = resp.data.response;
+            })
         },
-        getGenreList() {
-        // funzione per togliere i doppioni di genere
-        }
-    },
-    mounted() {
+        mounted() {
         this.fetchApp();
+    },
+        
+        getGenreList() {
+            const genreList: [];
+            
+            this.mySongsList.forEach((album) => {
+                // il genere che sto analizzando in questo ciclo, esiste già nella lista finale?
+                // Se non esiste, ne faccio push.
+                if (!genreList.includes(album.genre)) {
+                genreList.push(album.genre);
+                }
+            });
+            return genreList;
+            },
+        }
     }
-}
 </script>
 
 <style scoped lang="scss">

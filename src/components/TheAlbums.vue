@@ -35,9 +35,6 @@ export default {
         axios.get(this.apiUrl).then((resp) => {
             this.mySongsList = resp.data.response;
         })
-        },
-        getGenreList() {
-        // funzione per togliere i doppioni di genere
         }
     },
     mounted() {
