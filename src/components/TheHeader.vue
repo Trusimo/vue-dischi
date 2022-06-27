@@ -46,12 +46,11 @@ export default {
             });
             return genreList;
             },
-
-            mounted() {
+        },
+        mounted() {
             console.log("pluto");
                 this.fetchApp();
             },
-        }
     }
 </script>
 
