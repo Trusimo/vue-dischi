@@ -30,10 +30,11 @@ export default {
         fetchApp() {
             axios.get(this.apiUrl).then((resp) => {
                 this.mySongsList = resp.data.response;
-            })
+            }), console.log(this.fetchApp);
         },
         mounted() {
         this.fetchApp();
+        console.log(this.mounted);
     },
         
         getGenreList() {
@@ -42,7 +43,7 @@ export default {
             this.mySongsList.forEach((album) => {
                 if (!genreList.includes(album.genre)) {
                 genreList.push(album.genre);
-                }
+                } console.log(this.getGenreList);
             });
             return genreList;
             },
