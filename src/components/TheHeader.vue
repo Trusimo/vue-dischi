@@ -34,11 +34,6 @@ export default {
             })
         },
         
-
-        mounted() {
-            console.log("pluto");
-        this.fetchApp();
-    },
         
         getGenreList() {
             console.log("paperino");
@@ -50,6 +45,11 @@ export default {
                 }
             });
             return genreList;
+            },
+
+            mounted() {
+            console.log("pluto");
+                this.fetchApp();
             },
         }
     }
