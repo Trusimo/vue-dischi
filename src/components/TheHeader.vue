@@ -28,7 +28,7 @@ export default {
 
     methods: { 
         fetchApp() {
-            console.log(this.fetchApp);
+            console.log("pippoo");
             axios.get(this.apiUrl).then((resp) => {
                 this.mySongsList = resp.data.response;
             })
@@ -36,12 +36,12 @@ export default {
         
 
         mounted() {
-            console.log(this.mounted);
+            console.log("pluto");
         this.fetchApp();
     },
         
         getGenreList() {
-            console.log(this.getGenreList);
+            console.log("paperino");
             let genreList = [];
             
             this.mySongsList.forEach((album) => {
